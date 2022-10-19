@@ -46,7 +46,7 @@ export function Post({ author, content, publishedAt }) {
     event.target.setCustomValidity("Esse campo é obrigatório");
   }
 
-  const isNewCommentEmpty = newCommentText.length === 0;
+  const isNewCommentEmpty = newCommentText.trim().length === 0;
 
   return (
     <article className={styles.post}>
